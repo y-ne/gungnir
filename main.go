@@ -77,9 +77,9 @@ func main() {
 	r.Use(middleware.Recoverer)
 	r.HandleFunc("/*", handleCallback)
 
-	fmt.Printf("Server started on http://localhost:8123\n")
-
-	if err := http.ListenAndServe(":8123", r); err != nil {
+	fmt.Printf("Server started on http://0.0.0.0:8123\n")
+	
+	if err := http.ListenAndServe("0.0.0.0:8123", r); err != nil {
 		fmt.Printf("Server error: %v\n", err)
 	}
 }
