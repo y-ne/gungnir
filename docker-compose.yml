@@ -1,0 +1,8 @@
+services:
+  gungnir:
+    build: .
+    image: gungnir
+    container_name: gungnir
+    ports:
+      - "8123:8123"
+    restart: always
